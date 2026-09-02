@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 850px;
+
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* TÍTULO */
+
+.conteudo-titulo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.conteudo-titulo img {
+    width: 55px;
+    margin-bottom: 15px;
+}
+
+.titulo-principal {
+    font-size: 32px;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.titulo-secundario {
+    font-size: 16px;
+    font-weight: 400;
+    color: #94a3b8;
+}
+
+/* CAMPO DA SENHA */
+
+.conteudo-senha {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+.conteudo-senha label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+#campo-senha {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 20px;
+
+    border: 2px solid #334155;
+    border-radius: 10px;
+
+    background-color: #020617;
+    color: #38bdf8;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    outline: none;
+}
+
+#campo-senha:focus {
+    border-color: #38bdf8;
+}
+
+/* PARÂMETROS */
+
+.parametro {
+    border-top: 1px solid #334155;
+    padding-top: 30px;
+}
+
+.parametro-titulo {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #f8fafc;
+}
+
+.parametro-coluna__senha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.parametro-senha {
+    background-color: #1e293b;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+.parametro-senha__titulo {
+    font-size: 16px;
+    color: #cbd5e1;
+
+    margin-bottom: 20px;
+}
+
+/* BOTÕES DE TAMANHO */
+
+.parametro-senha-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parametro-senha__botao {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #0ea5e9;
+    color: white;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.parametro-senha__botao:hover {
+    background-color: #0284c7;
+    transform: scale(1.05);
+}
+
+.parametro-senha__texto {
+    font-size: 24px;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+/* CHECKBOXES */
+
+.parametro-senha-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.parametro-senha-checkbox div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.parametro-senha-checkbox input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #0ea5e9;
+
+    cursor: pointer;
+}
+
+.parametro-senha-checkbox label {
+    color: #cbd5e1;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+/* FORÇA DA SENHA */
+
+.forca-senha {
+    width: 100%;
+    height: 10px;
+
+    background-color: #334155;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 12px;
+}
+
+.barra-forca {
+    width: 100%;
+    height: 100%;
+
+    background-color: #22c55e;
+
+    border-radius: 10px;
+}
+
+#texto-forca {
+    font-size: 14px;
+    font-weight: 600;
+    color: #22c55e;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .conteudo {
+        padding: 25px;
+    }
+
+    .titulo-principal {
+        font-size: 26px;
+    }
+
+    .titulo-secundario {
+        font-size: 14px;
+    }
+
+    .parametro-coluna__senha {
+        grid-template-columns: 1fr;
+    }
+}
